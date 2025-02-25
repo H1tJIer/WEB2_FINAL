@@ -8,6 +8,8 @@ const path = require('path');
 const app = express();
 const cookieParser = require('cookie-parser');
 
+require('dotenv').config();
+
 // Подключение к MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
